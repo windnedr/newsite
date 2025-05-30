@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+body{
+    background-color: #0d0d15;
+    background-image: url(./assets/grie.png);
+    background-blend-mode: overlay;
+    background-size: 50px;
+
+    cursor: none;
+    color: #fff;
+    font-family: "JetBrains Mono", monospace;
+}
+
+div#cursglow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: url(./assets/BGtile.png);
+    mix-blend-mode: soft-light;
+    background-size: 50px;
+    width: 300px;
+    height: 300px;
+    mask: radial-gradient(50% 50% at 50% 50%, #FFFFFF, rgba(255, 255, 255, 0) 100%) no-repeat;
+    mask-size: 300px 300px;
+}
+
+img#curs{
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    
+    transform: scale(0.1);
+    opacity: 1;
+    z-index: 1;
+
+    mix-blend-mode: difference;
+}
+
+div#center{
+    animation-name: blinkin;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+    position: absolute;
+    left: calc(50vw / 2 - 10px);
+    top: calc(50vh / 2 - 10px);
+
+    background-color: #19192a6b;
+    backdrop-filter: blur(12px);
+
+    border: #1e1e30 1px solid;
+    padding: 10px;
+
+    width: 50vw;
+    height: 50vh;
+
+    box-shadow: #00000050 10px 10px;
+    overflow-y: scroll;
+}
+
+a{
+    transition: 0.25s;
+    color: #ec3461;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: #ec3461;
+    color: #ffffff;
+}
+
+@keyframes blinkin {
+    from{
+        /* background-color: #ffffff83; */
+        background-color: #19192a6b;
+    }
+    to{
+        background-color: #19192a00;
+    }
+}
