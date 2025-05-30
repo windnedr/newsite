@@ -18,7 +18,10 @@ function home() {
 
     var dv = document.createElement("div");
     dv.id = "center"
-    dv.innerHTML = "Windnedr<br><br><a onclick='proj()'>Projects</a><br><a onclick='abt()'>About Site</a><br>"
+    dv.innerHTML = "Windnedr<br><br>"
+    dv.innerHTML += "<a onclick='proj()'>Projects</a><br>"
+    dv.innerHTML += "<a onclick='abt()'>About Site</a><br>"
+    dv.innerHTML += "<a href='https://windnedr.github.io'>Visit Old Site</a><br>"
     document.body.appendChild(dv)
 }
 
@@ -30,6 +33,7 @@ function abt() {
     var dv = document.createElement("div");
     dv.id = "center"
     dv.innerHTML = "<img src='./assets/cowl.png' style='width: 100%;height: 40%;image-rendering: pixelated; object-fit: cover;padding-bottom: 8px;'> <br> About<br><br>Made in pure HTML, CSS, and Javascript"
+    dv.innerHTML += "<br><br>Last updated: May 30, 2025"
     document.body.appendChild(dv)
 }
 
@@ -53,19 +57,6 @@ function pom() {
     var dv = document.createElement("div");
     dv.id = "center"
     dv.innerHTML = "<img src='./assets/thumbnails/POMR wind banner.png' style='width: 100%;height: 40%;aspect-ratio: 4 / 1 !important;image-rendering: pixelated; object-fit: cover;padding-bottom: 8px;'>"
-    dv.innerHTML += "<br> POMR<br> <a href='https://pomr.org'>OPEN</a> <br><br>Made with Love and care! (also HTML, CSS, JS, and PHP) <br><hr>"
-    dv.innerHTML += "Desc.<br>POMR is a FOSS streaming service with User Generated Content. <br><br>Currently, the only media types are Shows & Movies.<br>More media types might be added if there is user demand."
-    document.body.appendChild(dv)
-}
-
-function pom() {
-    if (document.getElementById("center")){
-        document.getElementById("center").remove()
-    }
-
-    var dv = document.createElement("div");
-    dv.id = "center"
-    dv.innerHTML = "<img src='./assets/thumbnails/POMR wind banner.png' style='width: 100%;height: 40%;image-rendering: pixelated; object-fit: cover;padding-bottom: 8px;'>"
     dv.innerHTML += "<br> POMR<br> <a href='https://pomr.org'>OPEN</a> <br><br>Made with Love and care! (also HTML, CSS, JS, and PHP) <br><hr>"
     dv.innerHTML += "Desc.<br>POMR is a FOSS streaming service with User Generated Content. <br><br>Currently, the only media types are Shows & Movies.<br>More media types might be added if there is user demand."
     document.body.appendChild(dv)
